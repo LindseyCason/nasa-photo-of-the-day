@@ -8,7 +8,7 @@ export default function NasaParent() {
 
   useEffect(() => {
     axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=qkf4vBys4Izwq8kblrCpc4CbUfCXQ4afhLfuSHEP&date=2019-02-20`, {
+      .get(`https://api.nasa.gov/planetary/apod?api_key=qkf4vBys4Izwq8kblrCpc4CbUfCXQ4afhLfuSHEP&date=2019-08-15`, {
         params: {}
       })
       .then(response => {
