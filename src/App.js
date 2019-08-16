@@ -8,9 +8,9 @@ function App() {
         return (
 
           <div className="App">
-          <Nav />
+              <Nav />
               <NasaParent />
-              
+              {/* //Both of these components have to be inside a main div or container */}
              </div>
           
        

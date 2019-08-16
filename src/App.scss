@@ -47,7 +47,7 @@ box-shadow: 5px 15px 100px #4870c278;
   background-image: linear-gradient(rgb(58, 35, 58), rgb(184, 53, 53));
 } */
 .App{
-  background-color: rgba(56, 2, 58, 0.548);
+  background: url(./components/PictureforBG2.jpg) no-repeat center center fixed;
 }
 #root > div{
   display:flex;
@@ -56,15 +56,9 @@ box-shadow: 5px 15px 100px #4870c278;
 
 }
 
-/* #root > div > div{
-  width: 40vw;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-} */
-#root > div > div.ui.card{
-  background-color: rgb(213, 180, 243);
-}
+// #root > div > div.ui.card{
+//   background-image:"src/components/PictureforBG.jpg";
+// }
 
 
 .App .ui.card{

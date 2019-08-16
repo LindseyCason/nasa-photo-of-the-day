@@ -27,7 +27,7 @@ export default NasaChild;
 //This child is just the bare bones of the item we are going to be putting in the App. This child gets put into the parent (import) and the parent gives it the "DNA" aka properties it needs to appear on the screen. *See Parent*
 
 
-//this was my original data inside my return
+//this was my original data inside my return before using semantic. Keeping for reference.
  // <div className="NasaChild">
     //     <h1> NASA PHOTO OF THE DAY</h1>
     //     <h2>Title: {props.title}</h2>
