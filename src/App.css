@@ -31,3 +31,22 @@
     transform: rotate(360deg);
   }
 }
+
+h1,h2, h3{
+  color:white;
+}
+.description{
+padding: 10px 400px;  
+color: rgb(155, 228, 228);
+/* border-radius: 20px; */
+/* background-color: rgba(58, 35, 58, 0.6); */
+box-shadow: 5px 15px 100px #4870c278;
+}
+
+img{
+  box-shadow: 5px 15px 100px #4870c278;
+
+}
+body{
+  background-image: linear-gradient(rgb(58, 35, 58), rgb(184, 53, 53))
+}

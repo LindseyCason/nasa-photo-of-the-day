@@ -1,15 +1,17 @@
 import React from "react";
 import "./App.css";
+import NasaChild from "./components/NasaChild.js"
 
 function App() {
-  return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
-    </div>
-  );
-}
-
+         
+        return (
+          <div className="App">
+            
+              <NasaChild />
+              
+          
+          </div>
+        );
+      
+    }//close App
 export default App;
