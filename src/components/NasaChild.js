@@ -1,37 +1,43 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import NasaParent from "./NasaParent.js";
+import React from 'react';
+import { Card, Image } from 'semantic-ui-react';
 
-export default function NasaChild() {
-  // NOTE: The value given to setState() must be of the same type as your vale is expected to be
-  const [info, setInfo] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=qkf4vBys4Izwq8kblrCpc4CbUfCXQ4afhLfuSHEP&date=2019-02-20`, {
-        params: {}
-      })
-      .then(response => {
-        const info = response.data;
-        console.log(info);
-        setInfo(info);
-      });
-  }, []);
+const NasaChild = props =>{
+return(
+    
+  <Card>      
+    <Image src={props.picture} wrapped ui={false} />
+    <Card.Content>    
+        <Card.Header>NASA PHOTO OF THE DAY</Card.Header>
+        <Card.Meta>{props.title}</Card.Meta>
+        <Card.Meta>{props.date}</Card.Meta>
+        <Card.Description>{props.description}</Card.Description>
+    </Card.Content>
+  </Card>
 
-//   return (
-//     <div className="Nasa-POD">
-//       {info.map(info => {  //MAP ISN'T WORKING BECAUSE AXIOS LINK IS ONE OBJECT. NEED TO FIND THE FULL DATABASE OF IMAGES OR CREATE A DYNAMIC DATE TO SUB INTO THE URL TO CHANGE!
-        return (
-          <NasaParent
-            description={info.explanation}
-            picture={info.url}
-            title={info.title}
-            date={info.date}
-          />
-        );
-    //   })}
-    // </div>
-//   );
+ );
 };
 
 
+
+export default NasaChild;
+
+
+
+//This child is just the bare bones of the item we are going to be putting in the App. This child gets put into the parent (import) and the parent gives it the "DNA" aka properties it needs to appear on the screen. *See Parent*
+
+
+//this was my original data inside my return
+ // <div className="NasaChild">
+    //     <h1> NASA PHOTO OF THE DAY</h1>
+    //     <h2>Title: {props.title}</h2>
+    //     <h3>Date: {props.date}</h3>
+    //     <h3 className="description">{props.description}</h3>
+    //     <img src={props.picture} alt="NASA Stars"/>
+    // </div>
+
+    // <Card className="NasaChild">
+    //   <Card.Content header={props.title} />
+    //   <Card.Content description={props.description} />
+    //   <Image src = {props.picture} />
+    // </Card>
